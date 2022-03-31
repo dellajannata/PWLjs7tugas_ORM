@@ -17,15 +17,19 @@
                                     class="form-control" id="nim" aria-describedby="nim"> </div>
                             <div class="form-group"> <label for="nama">Nama</label> <input type="nama" name="nama"
                                     class="form-control" id="nama" aria-describedby="nama"> </div>
+                            <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date"
+                                    name="tanggalLahir" class="form-control" id="tanggalLahir"
+                                    aria-describedby="tanggalLahir"> </div>
                             <div class="form-group"> <label for="kelas">Kelas</label>
                                 <input type="kelas" name="kelas" class="form-control" id="kelas"
                                     aria-describedby="password">
                             </div>
                             <div class="form-group"> <label for="jurusan">Jurusan</label> <input type="jurusan"
                                     name="jurusan" class="form-control" id="jurusan" aria-describedby="jurusan"> </div>
-                            <div class="form-group"> <label for="nohp">No.Hp</label> <input
-                                    type="nohp" name="nohp" class="form-control" id="nohp"
-                                    aria-describedby="nohp"> </div> <button type="submit"
+                            <div class="form-group"> <label for="nohp">No.Hp</label> <input type="nohp" name="nohp"
+                                    class="form-control" id="nohp" aria-describedby="nohp"> </div>
+                            <div class="form-group"> <label for="email">Email</label> <input type="email" name="email"
+                                    class="form-control" id="email" aria-describedby="email"> </div><button type="submit"
                                 class="btn btn-primary">Submit</button>
                         </form>
                 </div>
