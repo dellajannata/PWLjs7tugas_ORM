@@ -20,22 +20,26 @@
                             <div class="form-group"> <label for="nama">Nama</label> <input type="text" name="nama"
                                     class="form-control" id="nama" value="{{ $Mahasiswa->nama }}"
                                     aria-describedby="nama"> </div>
-                                    <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date" name="tanggalLahir"
-                                        class="form-control" id="tanggalLahir" value="{{ $Mahasiswa->tanggalLahir }}"
-                                        aria-describedby="tanggalLahir"> </div>
-                            <div class="form-group"> <label for="kelas">Kelas</label> <input type="kelas" name="kelas"
-                                    class="form-control" id="kelas" value="{{ $Mahasiswa->kelas }}"
-                                    aria-describedby="kelas"> </div>
+                            <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date"
+                                    name="tanggalLahir" class="form-control" id="tanggalLahir"
+                                    value="{{ $Mahasiswa->tanggalLahir }}" aria-describedby="tanggalLahir"> </div>
+                            <label for="kelas">Kelas</label>
+                            <select name="kelas" class="form-control">
+                                @foreach ($kelas as $kls)
+                                    <option value="{{ $kls->id }}" {{ $Mahasiswa->kelas_id == $kls->id ? 'selected' : '' }}>
+                                        {{ $kls->nama_kelas }}</option>
+                                @endforeach
+                            </select>
                             <div class="form-group"> <label for="jurusan">Jurusan</label> <input type="jurusan"
                                     name="jurusan" class="form-control" id="jurusan" value="{{ $Mahasiswa->jurusan }}"
                                     aria-describedby="jurusan"> </div>
-                            <div class="form-group"> <label for="nohp">No.Hp</label> <input
-                                    type="nohp" name="nohp" class="form-control" id="nohp"
-                                    value="{{ $Mahasiswa->nohp }}" aria-describedby="nohp"> </div> 
-                                    <div class="form-group"> <label for="email">E-mail</label> <input
-                                        type="email" name="email" class="form-control" id="email"
-                                        value="{{ $Mahasiswa->email }}" aria-describedby="email"> </div><button
-                                type="submit" class="btn btn-primary">Submit</button>
+                            <div class="form-group"> <label for="nohp">No.Hp</label> <input type="nohp" name="nohp"
+                                    class="form-control" id="nohp" value="{{ $Mahasiswa->nohp }}"
+                                    aria-describedby="nohp"> </div>
+                            <div class="form-group"> <label for="email">E-mail</label> <input type="email" name="email"
+                                    class="form-control" id="email" value="{{ $Mahasiswa->email }}"
+                                    aria-describedby="email"> </div><button type="submit"
+                                class="btn btn-primary">Submit</button>
                         </form>
                 </div>
             </div>

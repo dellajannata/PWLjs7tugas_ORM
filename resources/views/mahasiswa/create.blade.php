@@ -20,9 +20,13 @@
                             <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date"
                                     name="tanggalLahir" class="form-control" id="tanggalLahir"
                                     aria-describedby="tanggalLahir"> </div>
-                            <div class="form-group"> <label for="kelas">Kelas</label>
-                                <input type="kelas" name="kelas" class="form-control" id="kelas"
-                                    aria-describedby="password">
+                            <div class="form-group">
+                                <label for="kelas">Kelas</label>
+                                <select class="form-control" name="kelas">
+                                    @foreach ($kelas as $kls)
+                                        <option value="{{ $kls->id }}">{{ $kls->nama_kelas }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group"> <label for="jurusan">Jurusan</label> <input type="jurusan"
                                     name="jurusan" class="form-control" id="jurusan" aria-describedby="jurusan"> </div>

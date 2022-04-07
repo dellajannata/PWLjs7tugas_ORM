@@ -19,9 +19,13 @@ class Mahasiswa extends Model
         'nim',
         'nama',
         'tanggalLahir',
-        'kelas', 
+        'kelas_id', 
         'jurusan', 
         'nohp',
         'email'
     ];
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class);
+    }
 };
