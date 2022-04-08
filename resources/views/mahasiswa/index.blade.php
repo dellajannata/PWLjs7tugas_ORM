@@ -19,7 +19,7 @@
         <form class=" form-inline pt-1" action="{{ route('search') }}" method="GET">
             <div class="form-group">
                 <label class="sr-only" for="keyword"></label>
-                <input type="text"  name="keyword" class="form-control mr-md-2 semail" placeholder="Cari Nama Mahasiswa">
+                <input type="text" name="keyword" class="form-control mr-md-2 semail" placeholder="Cari Nama Mahasiswa">
             </div>
             <button type="submit" class="btn btn-outline-primary">Search</button>
         </form>
@@ -50,8 +50,8 @@
                             class="btn btn-primary" href="{{ route('mahasiswa.edit', $Mahasiswa->nim) }}">Edit</a>
                         @csrf
                         @method('DELETE') <button type="submit" class="btn btn-danger">Delete</button>
-                        <a class="btn btn-warning" href="{{route('nilai',$Mahasiswa->nim) }}"> Nilai</a>
-                     </form>
+                        <a class="btn btn-warning" href="{{ route('nilai', $Mahasiswa->nim) }}"> Nilai</a>
+                    </form>
                 </td>
             </tr>
         @endforeach
