@@ -36,3 +36,4 @@ Route::get('/barang', [BarangController::class, 'barang1']);
 Route::get('/pelanggan', [PelangganController::class, 'pelanggan1']);
 Route::resource('/mahasiswa', MahasiswaController::class);
 Route::get('/search', [MahasiswaController::class, 'search1'])->name('search');
+Route::get('/mahasiswa/nilai/{mahasiswa}', [MahasiswaController::class, 'mahasiswa_matakuliah1'])->name('nilai');
