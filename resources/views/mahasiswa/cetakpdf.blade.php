@@ -8,7 +8,8 @@
 
 <body>
     <center>
-        <h2>KARTU HASIL STUDI (KHS)</h2>
+        <h3 class="text-center">JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h3>
+        <h2 class="text-center">KARTU HASIL STUDI (KHS)</h2>
     </center>
     <br>
         <b>Nama:</b> {{ $mahasiswa->nama}}<br>
