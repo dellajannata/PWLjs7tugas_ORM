@@ -24,7 +24,7 @@ use App\Http\Controllers\MahasiswaController;
 //     return view('welcome');
 // });
 
-// Auth::routes();
+// Auth::routes();  
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -43,3 +43,5 @@ Route::get('/search', [MahasiswaController::class, 'search1'])->name('search');
 Route::get('/mahasiswa/nilai/{mahasiswa}', [MahasiswaController::class, 'mahasiswa_matakuliah1'])->name('nilai');
 
 Route::resource('articles',ArticleController::class);
+
+Route::get('/article/cetak_pdf',[ArticleController::class,'cetak_pdf']);
