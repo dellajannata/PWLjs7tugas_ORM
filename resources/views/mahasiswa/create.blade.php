@@ -12,11 +12,13 @@
                                 @endforeach
                             </ul>
                         </div>
-                        @endif <form method="post" action="{{ route('mahasiswa.store') }}" id="myForm"> @csrf <div
+                        @endif <form method="post" enctype="multipart/form-data" action="{{ route('mahasiswa.store') }}" id="myForm"> @csrf <div
                                 class="form-group"> <label for="nim">Nim</label> <input type="text" name="nim"
                                     class="form-control" id="nim" aria-describedby="nim"> </div>
                             <div class="form-group"> <label for="nama">Nama</label> <input type="nama" name="nama"
                                     class="form-control" id="nama" aria-describedby="nama"> </div>
+                            <div class="form-group"> <label for="foto">Foto</label> <input type="file" name="foto"
+                                    class="form-control" id="foto" aria-describedby="foto"> </div>
                             <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date"
                                     name="tanggalLahir" class="form-control" id="tanggalLahir"
                                     aria-describedby="tanggalLahir"> </div>

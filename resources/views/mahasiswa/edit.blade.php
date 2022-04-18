@@ -12,7 +12,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                        @endif <form method="post" action="{{ route('mahasiswa.update', $Mahasiswa->nim) }}" id="myForm">
+                        @endif <form method="post" enctype="multipart/form-data" action="{{ route('mahasiswa.update', $Mahasiswa->nim) }}" id="myForm">
                             @csrf @method('PUT')
                             <div class="form-group"> <label for="nim">Nim</label> <input type="text" name="nim"
                                     class="form-control" id="nim" value="{{ $Mahasiswa->nim }}" aria-describedby="nim">
@@ -20,13 +20,19 @@
                             <div class="form-group"> <label for="nama">Nama</label> <input type="text" name="nama"
                                     class="form-control" id="nama" value="{{ $Mahasiswa->nama }}"
                                     aria-describedby="nama"> </div>
+                            <div class="form-group"> <label for="foto">Foto</label> <input type="file" name="foto"
+                                    class="form-control" id="foto" value="{{ $Mahasiswa->foto }}"
+                                    aria-describedby="foto"><br>
+                                <img width="100px" src="{{ asset('storage/' . $Mahasiswa->foto) }}">
+                            </div>
                             <div class="form-group"> <label for="tanggalLahir">Tanggal Lahir</label> <input type="date"
                                     name="tanggalLahir" class="form-control" id="tanggalLahir"
                                     value="{{ $Mahasiswa->tanggalLahir }}" aria-describedby="tanggalLahir"> </div>
                             <label for="kelas">Kelas</label>
                             <select name="kelas" class="form-control">
                                 @foreach ($kelas as $kls)
-                                    <option value="{{ $kls->id }}" {{ $Mahasiswa->kelas_id == $kls->id ? 'selected' : '' }}>
+                                    <option value="{{ $kls->id }}"
+                                        {{ $Mahasiswa->kelas_id == $kls->id ? 'selected' : '' }}>
                                         {{ $kls->nama_kelas }}</option>
                                 @endforeach
                             </select>
