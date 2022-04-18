@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SupplierController;
@@ -40,3 +41,5 @@ Route::resource('/mahasiswa', MahasiswaController::class);
 Route::get('/search', [MahasiswaController::class, 'search1'])->name('search');
 
 Route::get('/mahasiswa/nilai/{mahasiswa}', [MahasiswaController::class, 'mahasiswa_matakuliah1'])->name('nilai');
+
+Route::resource('articles',ArticleController::class);
